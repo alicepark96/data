@@ -4,3 +4,5 @@ koreanize_matplotlib
 streamlit-folium
 streamlit
 geopy
+pandas
+matplotlib
