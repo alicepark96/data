@@ -8,7 +8,7 @@ st.title("📈 기온 데이터 시각화")
 # CSV 데이터 불러오기
 @st.cache_data
 def load_data():
-    df = pd.read_csv("ta_20250712105856.csv", encoding="utf-8")  # 필요시 cp949로 변경
+    df = pd.read_csv("ta_20250712105856.csv", encoding="cp949")  # 필요시 cp949로 변경
     df["일시"] = pd.to_datetime(df["일시"])
     return df
 
