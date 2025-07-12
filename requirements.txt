@@ -1,4 +1,4 @@
 plotly
 folium
 koreanize_matplotlib
-streamlit_folium
+streamlit-folium
