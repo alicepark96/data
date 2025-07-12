@@ -6,7 +6,7 @@ st.set_page_config(layout="wide")
 st.title("🌡️ 기온 데이터 시각화")
 
 # CSV 파일 경로
-csv_file = "temperature.csv"
+csv_file = "temp.csv"
 
 # 데이터 불러오기
 @st.cache_data
