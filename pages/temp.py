@@ -9,9 +9,11 @@ st.title("📈 기온 데이터 시각화")
 @st.cache_data
 def load_data():
     df = pd.read_csv("ta_20250712105856.csv", encoding="cp949")
-    df.columns = df.columns.str.strip()  # 공백 제거
-    df["날짜"] = pd.to_datetime(df["날짜"])  # ✔ 수정된 열 이름
+    df.columns = df.columns.str.strip()
+    df["날짜"] = pd.to_datetime(df["날짜"], errors="coerce")  # ✔️ 안전하게 변환
+    df = df.dropna(subset=["날짜"])  # ✔️ 변환 실패한 날짜 제거
     return df
+
 
 df = load_data()
 
